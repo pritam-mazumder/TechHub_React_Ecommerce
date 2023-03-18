@@ -113,13 +113,12 @@ const Home = () => {
     <section className="timer__count">
       <Container>
         <Row>
-          <Col lg='6' md='6'>
-          
-          <div className="clock__top-content">
-            <p><ul><li>&nbsp;</li></ul></p>
-            <h4 className='text-white fs-6 mb-2'>Limited Offers</h4>
-            <h3 className='text-white fs-5 mb-3'>Quality Armchair</h3>
-          </div>
+          <Col lg='6' md='12' className='count__down-col'>
+            <div className="clock__top-content">
+              <p><ul><li>&nbsp;</li></ul></p>
+              <h4 className='text-white fs-6 mb-2'>Limited Offers</h4>
+              <h3 className='text-white fs-5 mb-3'>Quality Armchair</h3>
+            </div>
             <Clock />
 
             <motion.button 
@@ -129,8 +128,7 @@ const Home = () => {
               <Link to='/shop'>Visit Store</Link>
             </motion.button>
           </Col>
-
-          <Col lg='6' md='6' className='text-end'>
+          <Col lg='6' md='12' className='text-end mt-4 counter__img'>
             <img src={counterImg} alt="" />
           </Col>
         </Row>
@@ -160,8 +158,8 @@ const Home = () => {
           <ProductsList data={popularProducts}/>
         </Row>
       </Container>
+      <p><ul><li>&nbsp;</li><li>&nbsp;</li></ul></p>
     </section>
-
   </Helmet>
 };
 
