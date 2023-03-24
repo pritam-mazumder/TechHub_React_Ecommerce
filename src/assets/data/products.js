@@ -413,7 +413,7 @@ const products = [
 
   {
     id: "15",
-    productName: "Samsung Galaxy S22",
+    productName: "Samsung Galaxy S23",
     imgUrl: productImg18,
     category: "mobile",
     price: 699,
