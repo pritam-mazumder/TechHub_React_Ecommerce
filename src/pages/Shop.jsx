@@ -85,7 +85,7 @@ const Shop = () => {
                 </select>
               </div>
             </Col>
-            <Col lg='3' md='3'>
+            <Col lg='3' md='3' className='text-end'>
             <div className="filter__widget">
                 <select>
                   <option>Sort By</option>
