@@ -1,6 +1,6 @@
-import React,{useRef, useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./header.css";
 
 import { motion } from "framer-motion";
@@ -27,31 +27,36 @@ const nav__links = [
 ];
 
 const Header = () => {
-  const headerRef = useRef(null)
-  const totalQuantity = useSelector(state=> state.cart.totalQuantity)
+  const headerRef = useRef(null);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
-  const menuRef = useRef(null)
+  const menuRef = useRef(null);
+  const navigate = useNavigate()
 
-  const stickyHeaderFunc = ()=>{
-    window.addEventListener('scroll', ()=>{
+  const stickyHeaderFunc = () => {
+    window.addEventListener("scroll", () => {
       if (
-        document.body.scrollTop > 80 || 
+        document.body.scrollTop > 80 ||
         document.documentElement.scrollTop > 80
-        ) {
-        headerRef.current.classList.add('sticky__header')
-      } else{
-        headerRef.current.classList.remove('sticky__header')
+      ) {
+        headerRef.current.classList.add("sticky__header");
+      } else {
+        headerRef.current.classList.remove("sticky__header");
       }
     });
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     stickyHeaderFunc();
 
-    return()=>window.removeEventListener("scroll", stickyHeaderFunc);
+    return () => window.removeEventListener("scroll", stickyHeaderFunc);
   });
 
-  const menuToggle = () => menuRef.current.classList.toggle('active__menu')
+  const menuToggle = () => menuRef.current.classList.toggle("active__menu");
+
+  const navigateToCart =()=>{
+    navigate('/cart');
+  }
 
   return (
     <header className="header" ref={headerRef}>
@@ -87,7 +92,7 @@ const Header = () => {
                 <i class="ri-heart-line"></i>
                 <span className="badge">1</span>
               </span>
-              <span className="cart__icon">
+              <span className="cart__icon" onClick={navigateToCart}>
                 <i class="ri-shopping-bag-line"></i>
                 <span className="badge">{totalQuantity}</span>
               </span>
@@ -96,13 +101,11 @@ const Header = () => {
                 <motion.img whileTap={{ scale: 1.2 }} src={userIcon} alt="" />
               </span>
               <div className="mobile__menu">
-              <spna onClick={menuToggle}>
-                <i class="ri-menu-line"></i>
-              </spna>
+                <spna onClick={menuToggle}>
+                  <i class="ri-menu-line"></i>
+                </spna>
+              </div>
             </div>
-            </div>
-
-            
           </div>
         </Row>
       </Container>

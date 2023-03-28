@@ -162,12 +162,13 @@ const ProductDetails = () => {
 
                     <div className="review__form">
                       <h4>Leave your experience</h4>
-                      <form action="" onClick={submitHandler}>
+                      <form action="" onSubmit={submitHandler}>
                         <div className="form__group">
                           <input
                             type="text"
                             placeholder="Enter name"
                             ref={reviewUser}
+                            required
                           />
                         </div>
 
@@ -210,6 +211,7 @@ const ProductDetails = () => {
                             rows={4}
                             type="text"
                             placeholder="Review message..."
+                            required
                           />
                         </div>
 
@@ -240,3 +242,5 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
+
+//1.25.03 

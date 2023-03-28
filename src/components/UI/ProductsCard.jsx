@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import "../../styles/product-card.css";
 import { Col } from "reactstrap";
 import { Link } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../redux/slices/cartSlice";
 
 const ProductsCard = ({ item }) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const addToCart = () => {
     dispatch(
@@ -18,7 +18,7 @@ const ProductsCard = ({ item }) => {
         id: item.id,
         productName: item.productName,
         price: item.price,
-        image: item.imgUrl,
+        imgUrl: item.imgUrl,
       })
     );
 
@@ -46,4 +46,5 @@ const ProductsCard = ({ item }) => {
       </div>
     </Col>
   );
-};export default ProductsCard;
+};
+export default ProductsCard;
