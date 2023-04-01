@@ -28,7 +28,7 @@ const Login = () => {
                 <button type="submit" className="buy__btn auth__btn w-100">Login</button>
                 <p>
                   Don't have an account?{" "}
-                  <Link to="/singup">Create an account</Link>
+                  <Link to="/signup">Create an account</Link>
                 </p>
               </Form>
             </Col>
