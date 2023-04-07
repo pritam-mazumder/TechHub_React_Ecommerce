@@ -17,41 +17,41 @@ const Shop = () => {
   const handleFilter = e=>{
 
     const filterValue = e.target.value
-      if (filterValue==='sofa') {
+      if (filterValue==='motherboard') {
         const filteredProducts = products.filter(
-          (item)=> item.category==='sofa'
+          (item)=> item.category==='motherboard'
         );
 
         setProductData(filteredProducts);
       }
 
-      if (filterValue==='mobile') {
+      if (filterValue==='graphics card') {
         const filteredProducts = products.filter(
-          (item)=> item.category==='mobile'
+          (item)=> item.category==='graphics card'
         );
 
         setProductData(filteredProducts);
       }
 
-      if (filterValue==='chair') {
+      if (filterValue==='cpu') {
         const filteredProducts = products.filter(
-          (item)=> item.category==='chair'
+          (item)=> item.category==='cpu'
         );
 
         setProductData(filteredProducts);
       }
 
-      if (filterValue==='watch') {
+      if (filterValue==='ram') {
         const filteredProducts = products.filter(
-          (item)=> item.category==='watch'
+          (item)=> item.category==='ram'
         );
 
         setProductData(filteredProducts);
       }
 
-      if (filterValue==='wireless') {
+      if (filterValue==='psu') {
         const filteredProducts = products.filter(
-          (item)=> item.category==='wireless'
+          (item)=> item.category==='psu'
         );
 
         setProductData(filteredProducts);
@@ -77,11 +77,11 @@ const Shop = () => {
               <div className="filter__widget">
                 <select onChange={handleFilter}>
                   <option>Filter By Category</option>
-                  <option value="sofa">Sofa</option>
-                  <option value="mobile">Mobile</option>
-                  <option value="chair">Chair</option>
-                  <option value="watch">Watch</option>
-                  <option value="wireless">Wireless</option>
+                  <option value="motherboard">Motherboard</option>
+                  <option value="graphics card">Graphics Card</option>
+                  <option value="cpu">CPU</option>
+                  <option value="ram">RAM</option>
+                  <option value="psu">PSU</option>
                 </select>
               </div>
             </Col>

@@ -39,7 +39,7 @@ const AddProducts = () => {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
             await addDoc(docRef, {
-              title: enterTitle,
+              productsName: enterTitle,  // or title: enterTitle 
               shortDesc: enterShortDesc,
               description: enterDescription,
               category: enterCategory,
@@ -76,7 +76,7 @@ const AddProducts = () => {
                     <span>Product title</span>
                     <input
                       type="text"
-                      placeholder="Double sofa"
+                      placeholder="Motherboard"
                       value={enterTitle}
                       onChange={(e) => setEnterTitle(e.target.value)}
                       required
@@ -86,7 +86,7 @@ const AddProducts = () => {
                     <span>Short Description</span>
                     <input
                       type="text"
-                      placeholder="lorem..."
+                      placeholder="Short Description"
                       value={enterShortDesc}
                       onChange={(e) => setEnterShortDesc(e.target.value)}
                       required
@@ -123,11 +123,12 @@ const AddProducts = () => {
                         value={enterCategory}
                         onChange={(e) => setEnterCategory(e.target.value)}
                       >
-                        <option value="chair">Chair</option>
-                        <option value="sofa">Sofa</option>
-                        <option value="mobile">Mobile</option>
-                        <option value="watch">Watch</option>
-                        <option value="wireless">Wireless</option>
+                        <option>Select Category</option>
+                        <option value="motherboard">Motherboard</option>
+                        <option value="graphics card">Graphics Card</option>
+                        <option value="cpu">CPU</option>
+                        <option value="ram">RAM</option>
+                        <option value="psu">PSU</option>
                       </select>
                     </FormGroup>
                   </div>
@@ -157,6 +158,3 @@ const AddProducts = () => {
 };
 
 export default AddProducts;
-
-//4-04-2023: Signup, login, logout and profile picture module added and… 
-

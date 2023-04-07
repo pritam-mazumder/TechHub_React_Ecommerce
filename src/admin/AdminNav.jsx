@@ -35,7 +35,7 @@ const AdminNav = () => {
           <Container>
             <div className="admin__nav-wrapper-top">
               <div className="logo">
-                <h2>Multimart</h2>
+                <h2>Techhub</h2>
               </div>
 
               <div className="search__box2">
@@ -51,7 +51,7 @@ const AdminNav = () => {
                 <span>
                   <i class="ri-settings-2-line"></i>
                 </span>
-                <img src={currentUser.photoURL} alt="" />
+                <img src={currentUser && currentUser.photoURL} alt="" />
               </div>
             </div>
           </Container>

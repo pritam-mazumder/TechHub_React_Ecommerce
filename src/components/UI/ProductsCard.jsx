@@ -16,7 +16,7 @@ const ProductsCard = ({ item }) => {
     dispatch(
       cartActions.addItem({
         id: item.id,
-        productName: item.productName,
+        productName: item.productsName,
         price: item.price,
         imgUrl: item.imgUrl,
       })
@@ -33,7 +33,7 @@ const ProductsCard = ({ item }) => {
         </div>
         <div className="p-2 product__info">
           <h3 className="product__name">
-            <Link to={`/shop/${item.id}`}>{item.productName}</Link>
+            <Link to={`/shop/${item.id}`}>{item.productsName}</Link>
           </h3>
           <span>{item.category}</span>
         </div>
