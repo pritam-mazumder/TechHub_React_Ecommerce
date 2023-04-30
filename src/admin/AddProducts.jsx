@@ -39,7 +39,7 @@ const AddProducts = () => {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
             await addDoc(docRef, {
-              productsName: enterTitle,  // or title: enterTitle 
+              productsName: enterTitle, // or title: enterTitle
               shortDesc: enterShortDesc,
               description: enterDescription,
               category: enterCategory,
@@ -109,7 +109,7 @@ const AddProducts = () => {
                       <span>Price</span>
                       <input
                         type="number"
-                        placeholder="$100"
+                        placeholder="&#8377; 10000"
                         value={enterPrice}
                         onChange={(e) => setEnterPrice(e.target.value)}
                         required

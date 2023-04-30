@@ -141,7 +141,7 @@ const Home = () => {
       </Container>
     </section>
 
-    <section className="new__arrivals">
+    <section className="new__arrivals p-5">
       <Container>
         <Row>
           <Col lg="12" className="text-center mb-5">
@@ -156,19 +156,6 @@ const Home = () => {
           }
         </Row>
       </Container>
-    </section>
-
-    <section className="popular__category">
-    <Container>
-        <Row>
-          <Col lg="12" className="text-center mb-5">
-            <p><ul><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li></ul></p>
-            <h2 className="section__title">Popular in Category</h2>
-          </Col>
-          <ProductsList data={popularProducts}/>
-        </Row>
-      </Container>
-      <p><ul><li>&nbsp;</li><li>&nbsp;</li></ul></p>
     </section>
   </Helmet>
 };

@@ -68,7 +68,7 @@ const Footer = () => {
                 </ListGroupItem>
 
                 <ListGroupItem className="ps-0 border-0">
-                  <Link to="#">Privecy Policy</Link>
+                  <Link to="/aboutus">About Us</Link>
                 </ListGroupItem>
               </ListGroup>
             </div>

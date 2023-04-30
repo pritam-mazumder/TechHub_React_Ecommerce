@@ -33,7 +33,7 @@ const Checkout = () => {
                 </FormGroup>
 
                 <FormGroup className="form__group">
-                  <input type="text" placeholder="Street address" />
+                  <input type="text" placeholder="Address" />
                 </FormGroup>
 
                 <FormGroup className="form__group">
@@ -45,7 +45,7 @@ const Checkout = () => {
                 </FormGroup>
 
                 <FormGroup className="form__group">
-                  <input type="text" placeholder="Country" />
+                  <input type="text" placeholder="State" />
                 </FormGroup>
               </Form>
             </Col>
@@ -56,14 +56,14 @@ const Checkout = () => {
                   Total Qty: <span>{totalQty} items</span>
                 </h6>
                 <h6>
-                  Subtotal: <span>${totalAmount}</span>
+                  Subtotal: <span>&#8377; {totalAmount}</span>
                 </h6>
                 <h6>
-                  Shipping: <span>$0</span>
+                  Shipping: <span>&#8377; </span>
                 </h6>
                 <h6>Free shipping</h6>
                 <h4>
-                  Total Cost: <span>${totalAmount}</span>
+                  Total Cost: <span>&#8377; {totalAmount}</span>
                 </h4>
                 <button className="buy__btn2 suth__btn w-100">
                   Place an order

@@ -39,7 +39,7 @@ const AllProducts = () => {
                       </td>
                       <td>{item.productsName}</td>   {/*or <td>{item.title}</td>  */}
                       <td>{item.category}</td>
-                      <td>${item.price}</td>
+                      <td>&#8377; {item.price}</td>
                       <td>
                         <button
                           onClick={() => {
